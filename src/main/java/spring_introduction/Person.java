@@ -2,18 +2,21 @@ package spring_introduction;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component("personBean")
+//@Component("personBean")
 public class Person {
 
     private Pet pet;
+    @Value("${person.surname}")
     private String surname;
+    @Value("${person.age}")
     private int age;
 
-    @Autowired
+//    @Autowired
 
-    public Person(@Qualifier("dog")Pet pet) {
+    public Person(Pet pet) {
         this.pet = pet;
     }
    // @Autowired
