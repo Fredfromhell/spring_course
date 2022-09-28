@@ -1,4 +1,4 @@
-package aop.aspects;
+package aop;
 
 import aop.Student;
 import org.springframework.stereotype.Component;
@@ -21,6 +21,8 @@ public class University {
     }
 
     public List<Student> getStudents() {
+        System.out.println("Начало работы метода getStudents ");
+        System.out.println(students.get(3));
         System.out.println("information from method getStudents");
         System.out.println(students);
         return students;
